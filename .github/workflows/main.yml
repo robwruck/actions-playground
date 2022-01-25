@@ -1,0 +1,15 @@
+name: Build it
+
+on:
+  workflow_dispatch:
+
+permissions:
+  content: read
+
+jobs:
+  build:
+    name: Build job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run script
+        run: ./runme.sh

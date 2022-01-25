@@ -4,12 +4,14 @@ on:
   workflow_dispatch:
 
 permissions:
-  content: read
+  contents: read
 
 jobs:
   build:
     name: Build job
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repo contents
+        uses: uses: actions/checkout@v2
       - name: Run script
         run: ./runme.sh

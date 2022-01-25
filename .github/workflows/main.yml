@@ -8,10 +8,4 @@ permissions:
 
 jobs:
   build:
-    name: Build job
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repo contents
-        uses: actions/checkout@v2
-      - name: Run script
-        run: ./runme.sh
+    uses: ./.github/workflows/reusable.yml
